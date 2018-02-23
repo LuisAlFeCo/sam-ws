@@ -1,0 +1,8 @@
+
+type Demo {
+	message: String!
+}
+
+type Query {
+	getDemo: Demo!
+}

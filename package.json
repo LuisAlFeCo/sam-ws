@@ -1,0 +1,41 @@
+{
+  "name": "sam-ws",
+  "version": "1.0.0",
+  "description": "School Academic Management - Web Services",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "nodemon --watch dist dist/index.js",
+    "build-dev": "webpack --watch",
+    "build": "webpack -p",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jclabrand/sam-ws.git"
+  },
+  "keywords": [],
+  "author": "Juan Carlos Labrandero",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/jclabrand/sam-ws/issues"
+  },
+  "homepage": "https://github.com/jclabrand/sam-ws#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.1",
+    "jsonfile": "^4.0.0",
+    "merge-graphql-schemas": "^1.4.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "copy-webpack-plugin": "^4.4.1",
+    "eslint": "^4.18.1",
+    "eslint-plugin-node": "^6.0.0",
+    "nodemon": "^1.15.1",
+    "webpack": "^3.11.0",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
