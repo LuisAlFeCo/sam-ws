@@ -13,6 +13,7 @@ import path from 'path';
 import express from 'express';
 import jsonfile from 'jsonfile';
 import graphqlHTTP from 'express-graphql';
+import cors from 'cors';
 
 import Api from './api';
 
@@ -31,7 +32,7 @@ class App {
 		this.api = new Api();
 
 		this.express.use(this.onRequest.bind(this));
-
+		this.express.use(cors());
 		this.express.use('/graphql', graphqlHTTP({
 			schema: this.api.schema,
 			rootValue: this.api.resolvers,
