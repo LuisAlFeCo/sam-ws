@@ -21,12 +21,16 @@
   },
   "homepage": "https://github.com/jclabrand/sam-ws#readme",
   "dependencies": {
+    "async": "^2.6.0",
+    "co": "^4.6.0",
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "express-graphql": "^0.6.12",
     "graphql": "^0.13.1",
     "jsonfile": "^4.0.0",
-    "merge-graphql-schemas": "^1.4.0"
+    "merge-graphql-schemas": "^1.4.0",
+    "moment": "^2.21.0",
+    "mongoose": "^5.0.9"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
