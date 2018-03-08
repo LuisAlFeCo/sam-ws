@@ -34,6 +34,7 @@
             "always"
 		],
         "no-unused-vars": 0,
-        "require-yield": "off"
+		"require-yield": "off",
+		"no-console": "warn"
     }
 }
