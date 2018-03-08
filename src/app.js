@@ -16,6 +16,7 @@ import graphqlHTTP from 'express-graphql';
 import cors from 'cors';
 
 import Api from './api';
+import Database from './persistence/database';
 
 /****************************************************************************************/
 
@@ -30,6 +31,7 @@ class App {
 
 	init() {
 		this.api = new Api();
+		this.db = new Database(this.config);
 
 		this.express.use(this.onRequest.bind(this));
 		this.express.use(cors());
@@ -44,10 +46,12 @@ class App {
 	}
 
 	onStart() {
-		console.log('INFORMACIÓN: El servidor está listo y escuchando por el puerto:', this.config.port);
+		console.log('[INFO]: Server is up and running on port:', this.config.port);
 	}
 
 	onRequest(req, res, next) {
+		req.db = this.db;
+
 		next();
 	}
 }

@@ -12,6 +12,7 @@ import {buildSchema} from 'graphql';
 import {fileLoader, mergeTypes, mergeResolvers} from 'merge-graphql-schemas';
 
 import Demo from './resolvers/demo';
+import UserResolver from './resolvers/user-resolver';
 
 /****************************************************************************************/
 
@@ -30,9 +31,11 @@ class Api {
 
 	__buildResolvers() {
 		this.demo = new Demo;
+		this.user = new UserResolver;
 		
 		let resolvers = [
-			this.demo.resolvers()
+			this.demo.resolvers(),
+			this.user.resolvers()
 		];
 
 		return mergeResolvers(resolvers);

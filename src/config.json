@@ -1,3 +1,16 @@
 {
-	"port": "8080"
+	"port": "8080",
+
+	"db": {
+		"host": "localhost",
+		"database": "sam9001sme"
+	},
+
+	"auth": {
+		"passwordCrypt": {
+			"algorithm": "aes-256-ctr",
+			"secret": "79IHEKr3Yq5PNMU1w095t1poNb66xAk5",
+			"iv": "26ae5cc854e36b6bdfca366848dea6bb"
+		}
+	}
 }
